@@ -9,7 +9,6 @@ struct sign
 }r;
 
 void draw(int, int, char*);
-int stringLength(char*);
 
 int main()
 {
@@ -22,7 +21,7 @@ int main()
 
 void draw(int w, int h, char* t)
 {
-	int l = stringLength(t), s1, s2;
+	int l = strlen(t), s1, s2;
 	s1 = (w - 2 - l) / 2;
 	s2 = w - 2 - l - s1;
 
@@ -46,11 +45,4 @@ void draw(int w, int h, char* t)
 			cout << endl;
 		}
 	}
-}
-
-int stringLength(char* t)
-{
-	int i = 0;
-	while (t[i] != '\0') i++;
-	return i;
 }
